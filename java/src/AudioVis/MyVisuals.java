@@ -16,7 +16,7 @@ public class MyVisuals extends Visual{
 
         // Use this to make fullscreen and use P3D for 3D graphics
         fullScreen(P3D, SPAN);
-    }
+    } // End settings()
 
     public void setup() {
         startMinim();
@@ -32,7 +32,7 @@ public class MyVisuals extends Visual{
 
             
 
-    }
+    } // End setup()
 
     int current = 0;
     boolean spacePressed = false;
@@ -64,7 +64,7 @@ public class MyVisuals extends Visual{
         } else if (key == ' ') {
             
         }
-    }
+    } // End keyPressed()
 
     
 
@@ -86,13 +86,13 @@ public class MyVisuals extends Visual{
         }
             else if (current == 7) {
            
-        }
+        } // End if
 
         // Render common elements
         
        
-    }
+    } // End draw()
 
 
     
-}
+} // End main()
