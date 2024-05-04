@@ -1,3 +1,4 @@
+
 package example;
 
 import ie.tudublin.*;
@@ -5,6 +6,7 @@ import ie.tudublin.*;
 public class MyVisual extends Visual {
     WaveForm wf;
     AudioBandsVisual abv;
+    Worm worm;
 
     public void settings() {
         size(1024, 500);
@@ -13,43 +15,41 @@ public class MyVisual extends Visual {
         // fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
-        // fullScreen(P3D, SPAN);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup() {
         startMinim();
 
         // Call loadAudio to load an audio file to process
-        // loadAudio("heroplanet.mp3");
-
+        loadAudio("music/tagmp3_MCLuigiCircuit.mp3");
         // Call this instead to read audio from the microphone
-        startListening();
+        // startListening();
+
+        getAudioPlayer().cue(0);
+        getAudioPlayer().play();
 
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        worm = new Worm(this);
+     
     }
 
+    int current = 0;
+
     public void keyPressed() {
-        if (key == ' ') {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
+        if (key == '') {
+          
         }
+  
     }
 
     public void draw() {
         background(0);
-        try {
-            // Call this if you want to use FFT data
-            calculateFFT();
-        } catch (VisualException e) {
-            e.printStackTrace();
-        }
-        // Call this is you want to use frequency bands
-        calculateFrequencyBands();
-
-        // Call this is you want to get the average amplitude
-        calculateAverageAmplitude();
+      
+    
+        // im gonna render these here after the worm.java  so that they are on top
         wf.render();
-        abv.render();
+       abv.render();
     }
 }
