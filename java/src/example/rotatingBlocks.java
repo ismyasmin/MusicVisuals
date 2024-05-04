@@ -4,6 +4,8 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 public class rotatingBlocks {
+    MyVisual mv;
+    int lastColorChange = 0;
     int colorChangeInterval = 1500; // Change colors every 1.5 seconds
     float[] blockColors; // Stores the hue of each block
     float a = 0.0f; // Angle of rotation
@@ -11,7 +13,7 @@ public class rotatingBlocks {
     int num = 12; // num of boxes
     PVector[] boxPositions; // Stores the position of each box
 
- public RotatingShape(MyVisual mv) {
+ public rotatingBlocks(MyVisual mv) {
     this.mv = mv; // Initialize the MyVisual reference
     blockColors = new float[num]; // Initializes array to store block colors
     boxPositions = new PVector[num]; // Initializes array to store box positions
@@ -38,5 +40,40 @@ public class rotatingBlocks {
         }
     } // End initializeBoxPositions()
 
-} // End rotatingBlocks()
+    public void render() {
+        float amt = (float) (mv.millis() - lastColorChange) / colorChangeInterval; // Color change amount calculated
+        int audioIndex = (int) (mv.random(30, 512)); // Random audio buffer index
+        float audioValue = mv.getAudioBuffer().get(audioIndex); // Get audio value from the buffer
+        mv.pushMatrix(); // Current transformation matrix saved
+        mv.colorMode(mv.HSB, 360, 100, 100); // Color mode set to HSB
+
+        mv.translate(mv.width / 2, mv.height / 2 - 150); // Translate to the center 
+
+        if (amt >= 1.0) {
+            initializeBlockColors(); // Block colors after interval are to be reset
+            lastColorChange = mv.millis(); // Last color change timestamp updated
+        }
+        // Render each rotating box
+        for (int i = 0; i < num; i++) {
+            float hue = mv.lerp(blockColors[i], mv.lerp(0, 360, audioValue), amt); // Interpolate hue based on audio value
+            mv.fill(hue, 100, 100); // Fill color  set using HSB
+            mv.pushMatrix(); // Current transformation matrix saved
+            mv.rotateY(a + offset * i); // Rotate around Y-axis
+            mv.rotateX(a / 2 + offset * i); // Rotate around X-axis
+            mv.translate(boxPositions[i].x, boxPositions[i].y, 0); // Translate to box position
+            mv.box(50); // Draw a box
+            mv.popMatrix(); // Previous transformation matrix restored
+        }
+        a += 0.01; // Increment rotation angle
+        mv.popMatrix(); // Restore the original transformation matrix
+    } // End render()
+
+    
+        
+
+      
+    }
+ // End rotatingBlocks()
+
+
 
