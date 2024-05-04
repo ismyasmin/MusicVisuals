@@ -17,11 +17,26 @@ public class rotatingBlocks {
     boxPositions = new PVector[num]; // Initializes array to store box positions
     initializeBlockColors(); // Call method to initialize block colors
     initializeBoxPositions(); // Call method to initialize box positions
-    } // End
+    } // End  RotatingShape(M)
 
+    void initializeBlockColors() {
+        // Initialize block colors with random hues
+        for (int i = 0; i < num; i++) {
+            blockColors[i] = mv.random(360); // A random hue initialized to each block
+        }
+    } // End initializeBlockColors() 
 
-    
+    void initializeBoxPositions() {
+        float radius = 325; // Radius of the circular arrangement
+        float angle = 0; // Initial angle
+        // Positions of each box around a circle is calculated
+        for (int i = 0; i < num; i++) {
+            float x = radius * (float) Math.cos(angle); // X-coordinate of box position
+            float y = radius * (float) Math.sin(angle); // Y-coordinate of box position
+            boxPositions[i] = new PVector(x, y, 0); // Box position stored in the array
+            angle += mv.TWO_PI / num; // Angle incremented for the next box
+        }
+    } // End initializeBoxPositions()
 
-    
 } // End rotatingBlocks()
 
