@@ -3,7 +3,7 @@ package example;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-public class rotatingBlocks {
+public class RotatingBlocks {
     MyVisual mv;
     int lastColorChange = 0;
     int colorChangeInterval = 1500; // Change colors every 1.5 seconds
@@ -13,7 +13,7 @@ public class rotatingBlocks {
     int num = 12; // num of boxes
     PVector[] boxPositions; // Stores the position of each box
 
- public rotatingBlocks(MyVisual mv) {
+ public RotatingBlocks(MyVisual mv) {
     this.mv = mv; // Initialize the MyVisual reference
     blockColors = new float[num]; // Initializes array to store block colors
     boxPositions = new PVector[num]; // Initializes array to store box positions

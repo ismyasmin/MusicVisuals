@@ -7,6 +7,7 @@ public class MyVisual extends Visual {
     WaveForm wf;
     AudioBandsVisual abv;
     Worm worm;
+    RotatingBlocks rotatingBlocks;
 
     public void settings() {
         size(1024, 500);
@@ -32,6 +33,7 @@ public class MyVisual extends Visual {
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         worm = new Worm(this);
+        rotatingBlocks = new RotatingBlocks(this);
      
     }
 
@@ -42,6 +44,10 @@ public class MyVisual extends Visual {
             worm.render();
             current = 1;
         }
+        else if (key == '2') {
+            rotatingBlocks.render();
+            current = 2;
+        }
   
     }
 
@@ -51,6 +57,9 @@ public class MyVisual extends Visual {
         
         if (current == 1) {
             worm.render();
+        }
+        else if (current == 2) {
+            rotatingBlocks.render();
         }
         
         // im gonna render these here after the worm.java  so that they are on top
