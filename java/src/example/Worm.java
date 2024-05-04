@@ -50,4 +50,25 @@ public class Worm {
             yvalues[i] = wormHeight;
         }
     }
+    
+
+    void renderWorm() {
+        // Draw worm with an ellipse at each location
+        mv.stroke(0);
+        mv.strokeWeight(4);
+        // Smoothly change colors
+        float hue = 0;
+        float hueIncrement = 255.0f / yvalues.length;
+        for (int x = 0; x < yvalues.length; x++) {
+            float y = mv.height / 2 + yvalues[x];
+            float y2 = mv.height / 2 - yvalues[x];
+            mv.fill(hue, 255, 255);
+            mv.ellipse(x * xspacing, y, 100, 50);
+            mv.fill((hue %255)-50, 255, 255);
+            mv.ellipse(x * xspacing, y2, 65, 50); // Draw ellipse for second worm
+            hue += hueIncrement;
+        }
+    }
 }
+
+
