@@ -38,8 +38,9 @@ public class MyVisual extends Visual {
     int current = 0;
 
     public void keyPressed() {
-        if (key == '') {
-          
+        if (key == '1') {
+            worm.render();
+            current = 1;
         }
   
     }
@@ -47,7 +48,11 @@ public class MyVisual extends Visual {
     public void draw() {
         background(0);
       
-    
+        
+        if (current == 1) {
+            worm.render();
+        }
+        
         // im gonna render these here after the worm.java  so that they are on top
         wf.render();
        abv.render();
