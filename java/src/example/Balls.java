@@ -25,5 +25,13 @@ public class Balls {
             dx[i] = (mv.TWO_PI / period) * xspacing;
             } // End for
             yvalues = new float[w/xspacing];    // Num of vertical locations based on the width and xspacing
-            
+        } // End public Balls()
+
+        public void render() {
+            mv.hint(mv.DISABLE_DEPTH_TEST);
+            calcBalls();
+            renderBalls();
+            mv.hint(mv.ENABLE_DEPTH_TEST);
+        }
+
 }
