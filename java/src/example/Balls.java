@@ -12,4 +12,9 @@ public class Balls {
     float[] yvalues;                           // Stores height values of the ball 
 
     
+    // Constructor for the ball class, taking a MyVisual instance as input
+    public Balls(MyVisual mv) {
+        this.mv = mv;  //The passed MyVisual instance assigned to the local mv variable
+         w = mv.width + 16; // Width of the ball visualization adjusted to the width of the sketch
+            
 }
