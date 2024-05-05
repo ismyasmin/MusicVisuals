@@ -8,12 +8,9 @@ public class MyVisual extends Visual {
     AudioBandsVisual abv;
     Worm worm;
     RotatingBlocks rotatingBlocks;
-<<<<<<< HEAD
     //Rotation rotation;
     Balls balls;
 
-=======
->>>>>>> a80d3fcc1010b4bc77fa93f9eaa35ce5bc2dfbc1
 
     public void settings() {
         size(1024, 500);
@@ -40,11 +37,8 @@ public class MyVisual extends Visual {
         abv = new AudioBandsVisual(this);
         worm = new Worm(this);
         rotatingBlocks = new RotatingBlocks(this);
-<<<<<<< HEAD
         // rotation = new Rotation(this);
         balls = new Balls(this);
-=======
->>>>>>> a80d3fcc1010b4bc77fa93f9eaa35ce5bc2dfbc1
      
     }
 
@@ -57,7 +51,6 @@ public class MyVisual extends Visual {
         }
         else if (key == '2') {
             rotatingBlocks.render();
-<<<<<<< HEAD
             current = 2; 
         }
             else if (key == '3') {
@@ -70,12 +63,6 @@ public class MyVisual extends Visual {
     //         current = 3;
     // }
     
-=======
-            current = 2;
-        }
-  
-    }
->>>>>>> a80d3fcc1010b4bc77fa93f9eaa35ce5bc2dfbc1
 
     public void draw() {
         background(0);
@@ -87,7 +74,6 @@ public class MyVisual extends Visual {
         else if (current == 2) {
             rotatingBlocks.render();
         }
-<<<<<<< HEAD
         else if(current == 3)
         {
             balls.render();
@@ -97,8 +83,6 @@ public class MyVisual extends Visual {
         // {
         //     rotation.render(width, height);
         // }
-=======
->>>>>>> a80d3fcc1010b4bc77fa93f9eaa35ce5bc2dfbc1
         
         // im gonna render these here after the worm.java  so that they are on top
        wf.render();
