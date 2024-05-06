@@ -63,6 +63,8 @@ public class MyVisual extends Visual {
                 current = 3;
         } else if (key == '4') {
            gradientShape.render();
+           wf.render();
+           abv.render();
             current = 4;
         }
     } // End keyPressed()
