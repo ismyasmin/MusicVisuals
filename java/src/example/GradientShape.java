@@ -14,7 +14,7 @@ public class GradientShape {
         this.height = mv.height;
         this.width = mv.width;
         dim = width / 2;
-    } // End GradientShape()
+    } // End public GradientShape()
 
     public void render() {
         mv.background(0);
@@ -42,6 +42,9 @@ public class GradientShape {
                 mv.fill(h, saturation, brightness);
                 mv.ellipse(x, y, r, r);
 
+                 // Gradually change the hue for the next circle
+                 h = (h + 1) % 360;
+
            } // End for
 
 
@@ -49,4 +52,4 @@ public class GradientShape {
 
 
     
-}
+} // End public class GradientShape
