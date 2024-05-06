@@ -38,6 +38,10 @@ public class GradientShape {
                float saturation = PApplet.map(r, 0, radius, 90, 100);
                float brightness = PApplet.map(r, 0, radius, 90, 100);
 
+                // Set fill color using HSB color mode
+                mv.fill(h, saturation, brightness);
+                mv.ellipse(x, y, r, r);
+
            } // End for
 
 
