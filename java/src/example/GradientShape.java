@@ -22,19 +22,24 @@ public class GradientShape {
         // Get the audio amplitude from the MyVisual instance
         audioAmplitude = mv.getAudioBuffer().get(0);
 
-         // Calculate the initial hue based on amplitude
-        float h = PApplet.map(amplitude, -1, 1, 0, 360);
-
-            // Draw each circle with a smoothly changing hue
-            for (int r = radius; r > 0; --r) {
-
-            } // End for
-
+      
 
     } // End render()
 
     private void drawGradient(float x, float y, float amplitude) {
         int radius = dim / 2;
+
+           // Calculate the initial hue based on amplitude
+           float h = PApplet.map(amplitude, -1, 1, 0, 360);
+
+           // Draw each circle with a smoothly changing hue
+           for (int r = radius; r > 0; --r) {
+               // Adjust saturation and brightness for a more vivid color
+               float saturation = PApplet.map(r, 0, radius, 90, 100);
+               float brightness = PApplet.map(r, 0, radius, 90, 100);
+
+           } // End for
+
 
     } // End  drawGradient()
 
