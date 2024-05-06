@@ -10,6 +10,7 @@ public class MyVisual extends Visual {
     RotatingBlocks rotatingBlocks;
     //Rotation rotation;
     Balls balls;
+    GradientShape gradientShape;
 
 
     public void settings() {
@@ -39,6 +40,7 @@ public class MyVisual extends Visual {
         rotatingBlocks = new RotatingBlocks(this);
         // rotation = new Rotation(this);
         balls = new Balls(this);
+        gradientShape= new GradientShape(this);
      
     }
 
@@ -48,16 +50,17 @@ public class MyVisual extends Visual {
         if (key == '1') {
             worm.render();
             current = 1;
-        }
-        else if (key == '2') {
+        } else if (key == '2') {
             rotatingBlocks.render();
             current = 2; 
-        }
-            else if (key == '3') {
+        } else if (key == '3') {
                 balls.render();
                 current = 3;
-            }
+        } else if (key == '4') {
+           gradientShape.render();
+            current = 4;
         }
+    } // End keyPressed()
     //     else if(key == '3')
     //         rotation.render(width, height);
     //         current = 3;
@@ -67,7 +70,6 @@ public class MyVisual extends Visual {
     public void draw() {
         background(0);
       
-        
         if (current == 1) {
             worm.render();
         }
@@ -77,6 +79,10 @@ public class MyVisual extends Visual {
         else if(current == 3)
         {
             balls.render();
+        }
+        else if(current == 4)
+        {
+            gradientShape.render();
         }
         
         // else if (current == 3)
