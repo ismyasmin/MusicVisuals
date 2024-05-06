@@ -20,7 +20,13 @@ public class GradientShape {
         // Get the audio amplitude from the MyVisual instance
         audioAmplitude = mv.getAudioBuffer().get(0);
 
+
     } // End render()
+
+    private void drawGradient(float x, float y, float amplitude) {
+        int radius = dim / 2;
+
+    } // End  drawGradient()
 
 
     
