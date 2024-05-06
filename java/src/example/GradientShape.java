@@ -1,5 +1,7 @@
 package example;
 
+import processing.core.PApplet;
+
 public class GradientShape {
     MyVisual mv;
 
@@ -19,6 +21,9 @@ public class GradientShape {
 
         // Get the audio amplitude from the MyVisual instance
         audioAmplitude = mv.getAudioBuffer().get(0);
+
+         // Calculate the initial hue based on amplitude
+        float h = PApplet.map(amplitude, -1, 1, 0, 360);
 
 
     } // End render()
