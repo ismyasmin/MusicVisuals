@@ -56,9 +56,14 @@ public class Worm {
                 int index = (int) (mv.map(i, 0, yvalues.length - 1, 0, audioBuffer.length - 1)); // Map index to audioBuffer range
                 float audioValue = audioBuffer[index];
             
-                if (j % 2 == 0)  wormHeight += mv.sin(x)*amplitude[j];
-                else wormHeight += mv.cos(x)*amplitude[j];
-                x+=dx[j];
+               
+                amplitude[j] = mv.map(audioValue, -1, 1, 20, 100); // Map audio amplitude to worm amplitude range
+
+                if (j % 2 == 0) {
+                    wormHeight += mv.sin(theta + (i * dx[j] / xspacing)) * amplitude[j];
+                } else {
+                    wormHeight += mv.cos(theta + (i * dx[j] / xspacing)) * amplitude[j];
+                }
             } // End for
             yvalues[i] = wormHeight;
         }
