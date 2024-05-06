@@ -35,17 +35,22 @@ public class Worm {
 
         // Render the worm visualization
         renderWorm();
-        
+
         // mv.hint(mv.ENABLE_DEPTH_TEST);
     }
+    
     void calcWorm() {
         
-        theta += 0.02;
+        theta += 0.02; // Increment theta for oscillation effect
 
-        
+        // Get the audio buffer from the MyVisual instance
+        float[] audioBuffer = mv.getAudioBuffer().toArray();
+
+        // Iterate over the yvalues array and update based on audio amplitude
         for (int i = 0; i < yvalues.length; i++) {
-            float x = theta + (i * dx[0] / xspacing);
             float wormHeight = 0;
+        
+            // Calculate the worm height based on audio amplitude
             for (int j = 0; j < maxworms; j++) {
             
                 if (j % 2 == 0)  wormHeight += mv.sin(x)*amplitude[j];
