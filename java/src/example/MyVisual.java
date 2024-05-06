@@ -8,7 +8,6 @@ public class MyVisual extends Visual {
     AudioBandsVisual abv;
     Worm worm;
     RotatingBlocks rotatingBlocks;
-    //Rotation rotation;
     Balls balls;
     GradientShape gradientShape;
 
@@ -38,7 +37,6 @@ public class MyVisual extends Visual {
         abv = new AudioBandsVisual(this);
         worm = new Worm(this);
         rotatingBlocks = new RotatingBlocks(this);
-        // rotation = new Rotation(this);
         balls = new Balls(this);
         gradientShape= new GradientShape(this);
      
@@ -67,11 +65,7 @@ public class MyVisual extends Visual {
            abv.render();
             current = 4;
         }
-    } // End keyPressed()
-    //     else if(key == '3')
-    //         rotation.render(width, height);
-    //         current = 3;
-    // }
+    }  // End keyPressed()
     
 
     public void draw() {
@@ -95,13 +89,8 @@ public class MyVisual extends Visual {
         {
             gradientShape.render();
         }
-        
-        // else if (current == 3)
-        // {
-        //     rotation.render(width, height);
-        // }
-        
+ 
     //    wf.render();
     //    abv.render();
-    }
+    } // End draw()
 }
