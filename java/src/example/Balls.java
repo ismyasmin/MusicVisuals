@@ -32,6 +32,29 @@ public class Balls {
             calcBalls();
             renderBalls();
             mv.hint(mv.ENABLE_DEPTH_TEST);
-        }
+        } // End render()
+
+        void calcBalls() {
+            theta += 0.02;
+    
+            for (int i = 0; i < yvalues.length; i++) {
+                float x = theta + (i * dx[0] / xspacing);
+                float ballHeight = 0;
+                for (int j = 0; j < maxballs; j++) {
+                    // Calculate the influence of audio input on the ball's movement
+                    float audioValue = mv.getAudioBuffer().get(i); // Get audio value at index i
+                    float mappedAmplitude = mv.map(audioValue, 0, 1, 50, 200); // Map audio value to desired amplitude range
+                    
+                    if (j % 2 == 0) {
+                        ballHeight += mv.sin(x) * amplitude[j] * mappedAmplitude;
+                    } else {
+                        ballHeight += mv.cos(x) * amplitude[j] * mappedAmplitude;
+                    }
+                    x += dx[j];
+                }
+                yvalues[i] =ballHeight;
+            }
+        } // End calcBalls
+    
 
 }
