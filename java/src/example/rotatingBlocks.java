@@ -41,6 +41,8 @@ public class RotatingBlocks {
     } // End initializeBoxPositions()
 
     public void render() {
+        mv.stroke(0);
+        mv.strokeWeight(4);
         float amt = (float) (mv.millis() - lastColorChange) / colorChangeInterval; // Color change amount calculated
         int audioIndex = (int) (mv.random(30, 512)); // Random audio buffer index
         float audioValue = mv.getAudioBuffer().get(audioIndex); // Get audio value from the buffer
