@@ -52,11 +52,14 @@ public class Worm {
         
             // Calculate the worm height based on audio amplitude
             for (int j = 0; j < maxworms; j++) {
+                // Use audio amplitude to modulate the worm's amplitude dynamically
+                int index = (int) (mv.map(i, 0, yvalues.length - 1, 0, audioBuffer.length - 1)); // Map index to audioBuffer range
+                float audioValue = audioBuffer[index];
             
                 if (j % 2 == 0)  wormHeight += mv.sin(x)*amplitude[j];
                 else wormHeight += mv.cos(x)*amplitude[j];
                 x+=dx[j];
-            }
+            } // End for
             yvalues[i] = wormHeight;
         }
     }
