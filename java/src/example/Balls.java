@@ -54,7 +54,7 @@ public class Balls {
                 }
                 yvalues[i] =ballHeight;
             }
-        } // End calcBalls
+        } // End calcBalls()
 
         void renderBalls() {
             // Draw ball with an ellipse at each location
@@ -64,8 +64,16 @@ public class Balls {
             float hue = 0;
             float hueIncrement = 255.0f / yvalues.length;
 
-
+            for (int x = 0; x < yvalues.length; x++) {
+                float y = mv.height / 2 + yvalues[x];
+                float y2 = mv.height / 2 - yvalues[x];
+                mv.fill(hue, 255, 255);
+                mv.ellipse(x * xspacing, y, 100, 50);
+                mv.fill((hue %255)-50, 255, 255);
+                mv.ellipse(x * xspacing, y2, 65, 50); // Draw ellipse for second ball
+                hue += hueIncrement;
+            } // End for
         } // End renderBalls()
     
 
-}
+} // End Balls()
