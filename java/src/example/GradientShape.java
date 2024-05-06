@@ -25,6 +25,11 @@ public class GradientShape {
          // Calculate the initial hue based on amplitude
         float h = PApplet.map(amplitude, -1, 1, 0, 360);
 
+            // Draw each circle with a smoothly changing hue
+            for (int r = radius; r > 0; --r) {
+
+            } // End for
+
 
     } // End render()
 
