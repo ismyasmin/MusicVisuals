@@ -70,10 +70,6 @@ public class RotatingBlocks {
         mv.popMatrix(); // Restore the original transformation matrix
     } // End render()
 
-    
-        
-
-      
     }
  // End rotatingBlocks()
 
