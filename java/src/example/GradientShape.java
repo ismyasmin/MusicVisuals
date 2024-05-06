@@ -12,6 +12,12 @@ public class GradientShape {
         this.height = mv.height;
         this.width = mv.width;
         dim = width / 2;
-    }
+    } // End GradientShape()
+
+    public void render() {
+
+    } // End render()
+
+
     
 }
