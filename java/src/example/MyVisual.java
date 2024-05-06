@@ -47,7 +47,12 @@ public class MyVisual extends Visual {
     int current = 0;
 
     public void keyPressed() {
-        if (key == '1') {
+        if (key == '0') {
+            wf.render();
+            abv.render();
+            current = 0;
+        }
+        else if (key == '1') {
             worm.render();
             current = 1;
         } else if (key == '2') {
@@ -58,6 +63,8 @@ public class MyVisual extends Visual {
                 current = 3;
         } else if (key == '4') {
            gradientShape.render();
+           wf.render();
+           abv.render();
             current = 4;
         }
     } // End keyPressed()
@@ -70,7 +77,11 @@ public class MyVisual extends Visual {
     public void draw() {
         background(0);
       
-        if (current == 1) {
+        if (current == 0) {
+            wf.render();
+            abv.render();
+        }
+        else if (current == 1) {
             worm.render();
         }
         else if (current == 2) {
@@ -90,8 +101,7 @@ public class MyVisual extends Visual {
         //     rotation.render(width, height);
         // }
         
-        // im gonna render these here after the worm.java  so that they are on top
-       wf.render();
-       abv.render();
+    //    wf.render();
+    //    abv.render();
     }
 }

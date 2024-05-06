@@ -28,10 +28,15 @@ public class Worm {
         
 
     public void render() {
-        mv.hint(mv.DISABLE_DEPTH_TEST);
+        // mv.hint(mv.DISABLE_DEPTH_TEST);
+      
+        // Calculate worm heights based on audio input
         calcWorm();
+
+        // Render the worm visualization
         renderWorm();
-        mv.hint(mv.ENABLE_DEPTH_TEST);
+        
+        // mv.hint(mv.ENABLE_DEPTH_TEST);
     }
     void calcWorm() {
         
