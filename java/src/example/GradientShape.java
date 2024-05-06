@@ -15,6 +15,10 @@ public class GradientShape {
     } // End GradientShape()
 
     public void render() {
+        mv.background(0);
+
+        // Get the audio amplitude from the MyVisual instance
+        audioAmplitude = mv.getAudioBuffer().get(0);
 
     } // End render()
 
