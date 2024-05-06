@@ -55,6 +55,17 @@ public class Balls {
                 yvalues[i] =ballHeight;
             }
         } // End calcBalls
+
+        void renderBalls() {
+            // Draw ball with an ellipse at each location
+            mv.stroke(0);
+            mv.strokeWeight(4);
+            // Smoothly change colors
+            float hue = 0;
+            float hueIncrement = 255.0f / yvalues.length;
+
+
+        } // End renderBalls()
     
 
 }
