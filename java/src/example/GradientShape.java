@@ -22,7 +22,10 @@ public class GradientShape {
         // Get the audio amplitude from the MyVisual instance
         audioAmplitude = mv.getAudioBuffer().get(0);
 
-      
+        // Draw the gradient circles based on audio amplitude
+        for (int x = 0; x <= width; x += dim) {
+            drawGradient(x, height / 2, audioAmplitude);
+        } // End for
 
     } // End render()
 
