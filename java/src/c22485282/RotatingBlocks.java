@@ -1,5 +1,6 @@
-package example;
+package c22485282;
 
+import c22485282.MyVisual;
 import processing.core.PApplet;
 import processing.core.PVector;
 
