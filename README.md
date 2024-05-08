@@ -4,18 +4,9 @@ Name: Yasmin Ismail
 
 Student Number: C22485282
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
-
 # Description of the assignment
 
 # Instructions
-Instructions 
-
 Compile and run. 
 Press 0-4 to change between backgrounds. 
 
@@ -48,6 +39,7 @@ In the MyVisual class, these visuals are switched using keyboard input, the keyP
 
 
 # What I am most proud of in the assignment
+Doing this project has taught me a lot. I am most proud of what I managed to do, learning so much and how fun it was. Learning a concept to me that I had no knowledge of. Being able to create visuals responding to audio input using Processing is such a cool and fun concept, challenging but fun! Each process of the project, implementing various visual effects like rotating blocks, animated shapes, has taught me something new about Java. It was so fun, joyful and rewarding when the code worked as there were some difficulties implementing certain code, but I managed. It was challenging but as challenging as it was, it kept me engaged because the rewarding feeling of accomplishing it was worthwhile.  
 
 # Markdown Tutorial
 
