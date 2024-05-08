@@ -74,7 +74,7 @@ public class MyVisual extends Visual {
     
 
     public void draw() {
-        background(0);
+        background(20,50,90);
        
 
       
