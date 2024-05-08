@@ -31,6 +31,11 @@ https://www.youtube.com/watch?v=THFFP
 The classes of the visuals import from the "**c22485282**" package into their own Java programs to reuse the functionality demonstrated in these classes to render a visual effect. 
 I've implemented several visual effects.  
 
+MyVisual.java class is defined within the c22485282 package. Classes from ie.tudublin package are imported. MyVisual is a subclass that extends Visual which is an abstract class that's within the ie.tudublin package. This will serve as a foundation for audio visualization in Processing. This subclass was there when I forked the MusicVisuals repository, i have implemented more values in it. It contains several fields; wf, abv, worm, rotatingBlocks, balls, gradientShape. They are instances of different classes used for different visual effects and audio processing sketch.  
+
+It contains methods; settings(), setup(), keyPressed(), draw(). 
+
+
 Starting first with the Worm class. This renders a work-like shape based on audio input. It uses the functions sine and cosine to calculate the movement of segments. The amplitude of each segment is modulated by audio signal. The result of this leads to it responding to audio in a fluid wave-like motion.  
 The RotatingBlocks  class creates 3D blocks that rotate. Each block’s color and position changes based on the audio input. The blocks rotate around a central axis and color shifts over time in response to the audio. 
 In the Balls class, bouncing balls are generated that respond to audio input. Every movement of the ball is due to sine and cosine functions. Their amplitude is modulated by audio signal. The size and speed of the balls differ based on the audio input. 
