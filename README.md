@@ -1,8 +1,8 @@
 # Music Visualiser Project
 
-Name:
+Name: Yasmin Ismail
 
-Student Number: 
+Student Number: C22485282
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -14,8 +14,19 @@ Student Number:
 # Description of the assignment
 
 # Instructions
+Instructions 
+
+Compile and run. 
+Press 0-4 to change between backgrounds. 
+
 
 # How it works
+
+I have chosen a song that inspires me and reflects my style and interests. The Mario Kart Luigi Circuit. It has a clear structure, rhythm, and mood as the visual elements react well to the audio in real-time. The video will show this. It conveys a sense of mood, tempo, and narrative. I have used colour, shape, motion, and composition to create a visually compelling and dynamic representation of the song.   
+
+ 
+
+The classes of the visuals import from the "**c22485282**" package into their own Java programs to reuse the functionality demonstrated in these classes to render a visual effect. The package contains classes and code examples demonstrating specific concepts and functionalities..  
 
 # What I am most proud of in the assignment
 
