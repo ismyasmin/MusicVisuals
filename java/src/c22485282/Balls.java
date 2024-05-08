@@ -20,8 +20,8 @@ public class Balls {
            
         // // Initialize ball parameters
         for (int i = 0; i < maxballs; i++) {
-            amplitude[i] = mv.random(50,100); // Random amplitudes set for each ball
-            float period = mv.random(300,1000); // Random period set for each ball
+            amplitude[i] = mv.random(50,80); // Random amplitudes set for each ball
+            float period = mv.random(200,1000); // Random period set for each ball
             dx[i] = (mv.TWO_PI / period) * xspacing;
             } // End for
             yvalues = new float[w/xspacing];    // Num of vertical locations based on the width and xspacing
