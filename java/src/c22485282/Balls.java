@@ -20,7 +20,7 @@ public class Balls {
            
         // // Initialize ball parameters
         for (int i = 0; i < maxballs; i++) {
-            amplitude[i] = mv.random(100,120); // Random amplitudes set for each ball
+            amplitude[i] = mv.random(50,100); // Random amplitudes set for each ball
             float period = mv.random(300,1000); // Random period set for each ball
             dx[i] = (mv.TWO_PI / period) * xspacing;
             } // End for

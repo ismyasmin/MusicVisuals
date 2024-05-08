@@ -10,6 +10,7 @@ public class MyVisual extends Visual {
     RotatingBlocks rotatingBlocks;
     Balls balls;
     GradientShape gradientShape;
+    Snow snow;
 
 
     public void settings() {
@@ -39,6 +40,7 @@ public class MyVisual extends Visual {
         rotatingBlocks = new RotatingBlocks(this);
         balls = new Balls(this);
         gradientShape= new GradientShape(this);
+        snow = new  Snow(this);
      
     }
 
@@ -46,6 +48,7 @@ public class MyVisual extends Visual {
 
     public void keyPressed() {
         if (key == '0') {
+            
             wf.render();
             abv.render();
             current = 0;
@@ -65,29 +68,39 @@ public class MyVisual extends Visual {
            abv.render();
             current = 4;
         }
+    
+
     }  // End keyPressed()
     
 
     public void draw() {
         background(0);
+       
+
       
         if (current == 0) {
+            snow.render();
             wf.render();
             abv.render();
+            
         }
         else if (current == 1) {
+            snow.render();
             worm.render();
         }
         else if (current == 2) {
+            snow.render();
             rotatingBlocks.render();
         }
         else if(current == 3)
         {
+            // snow.render();
             balls.render();
         }
         else if(current == 4)
         {
             gradientShape.render();
+            //  snow.render();
         }
  
     //    wf.render();
