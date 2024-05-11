@@ -6,6 +6,10 @@ Student Number: C22485282
 
 # Description of the assignment
 
+Youtube video of  Music Visualiser Project: https://www.youtube.com/watch?v=PFwGrX_GDFs
+
+Song chosen for the Music Visualiser Project: https://www.youtube.com/watch?v=THFFP1EM3EU
+
 # Instructions
 Compile and run. 
 Press 0-4 to change between backgrounds. 
@@ -14,10 +18,6 @@ Press 0-4 to change between backgrounds.
 # How it works
 
 I have chosen a song that inspires me and reflects my style and interests. The Mario Kart Luigi Circuit. It has a clear structure, rhythm, and mood as the visual elements react well to the audio in real-time. The video will show this. It conveys a sense of mood, tempo, and narrative. I have used colour, shape, motion, and composition to create a visually compelling and dynamic representation of the song. 
-
-Song chosen: 
-https://www.youtube.com/watch?v=THFFP
-
  
 The classes of the visuals import from the "**c22485282**" package into their own Java programs to reuse the functionality demonstrated in these classes to render a visual effect. 
 I've implemented several visual effects.  
