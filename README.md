@@ -5,6 +5,7 @@ Name: Yasmin Ismail
 Student Number: C22485282
 
 # Description of the assignment
+I have created five classes which each displays different visuals. The Worm class visualizes  a worm-like shape that responds to audio input. The Rotating Blocks class renders 3D rotating blocks, modulates  colors and movements that responds to audio input, creating visual effects. The Balls class generate bouncing balls thats responds to audio input, dynamic patterns with colorful ellipses. The Gradient Shape renders three gradient circles, colors changing based on the audio input. The Snow class has snowfall simulation where snow falls. The snow begins at the top and drifts down. It responds to audio input.
 
 Youtube video of  Music Visualiser Project: https://www.youtube.com/watch?v=PFwGrX_GDFs
 
@@ -28,7 +29,7 @@ It contains methods; settings(), setup(), keyPressed(), draw().
 
 All of the classes below is part of the c22385282 package.  The background colour was black and it felt plain, so I changed the background colour.
 
-Starting first with the Worm class. This renders a work-like shape based on audio input. The Constructor Worm(MyVisual mv) initializes a Worm object with a reference to a MyVisual instance (mv). 
+Starting first with the Worm class. This renders a worm-like shape based on audio input. The Constructor Worm(MyVisual mv) initializes a Worm object with a reference to a MyVisual instance (mv). 
 The render() method renders the worm visualization. It calls calcWorm() method and renderWorm() method thus rendering the worm visually. The calcWorm() method dynamically adjusts the worm's visual based on audio amplitude, it contains the functions sine and cosine to calculate the movement of segments. The amplitude of each segment is modulated by audio signal. The result of this leads to it responding to audio in a fluid wave-like motion. 
 
 renderWorm() method draws the visual representation using ellipses. This provides a colourful and dynamic visual effect. It sets stroke properties. It iterates over yvalues to draw ellipses at each location. The position of the ellipses x, y is calculated based on the current xspacing and yvalues. The colours are determined by hue values. The result of this leads to it responding to audio in a fluid wave-like motion.
@@ -45,7 +46,7 @@ The render() Method coordinates the rendering process for the balls. mv.hint(mv.
 
 The calcBalls() method that calculates the height of each ball based on audio input. theta += 0.02 increments the angle for oscillation. There is a nested loop that iterates over yvalues array, calculates ballHeight based on audio input, also sine, cosine functions. The yvalues is updated with calculated ballHeight for each ball.
 
-The GradientShape class renders three gradient circles. The colors change based on the audio input.  It utilizes the Processing library PApplet. The Constructor GradientShape(MyVisual mv) initializes the mv reference with a MyVisual instance passed to the constructor. Sets the canvas dimensions, which is the height and width and calculates the size of the gradient circles which is the dim.
+The GradientShape class renders three gradient circles. The colors change based on the audio input. It utilizes the Processing library PApplet. The Constructor GradientShape(MyVisual mv) initializes the mv reference with a MyVisual instance passed to the constructor. Sets the canvas dimensions, which is the height and width and calculates the size of the gradient circles which is the dim.
 
 The render() method draws the gradient circles.The mv.background(0) sets the background color to black. The audio amplitude value from the MyVisual instance's audio buffer is retrieved from audioAmplitude = mv.getAudioBuffer().get(0). This fetches the amplitude value at index 0. A for loop is used to draw the gradient circles. It  increments x by dim, the size of each circle to position the circles evenly spaced.
 
