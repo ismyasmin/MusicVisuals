@@ -40,8 +40,18 @@ The calcBalls() method that calculates the height of each ball based on audio in
 The GradientShape class renders three gradient circles. The colors change based on the audio input.  It utilizes the Processing library PApplet. The Constructor GradientShape(MyVisual mv) initializes the mv reference with a MyVisual instance passed to the constructor. Sets the canvas dimensions, which is the height and width and calculates the size of the gradient circles which is the dim.
 The render() method draws the gradient circles.The mv.background(0) sets the background color to black. The audio amplitude value from the MyVisual instance's audio buffer is retrieved from audioAmplitude = mv.getAudioBuffer().get(0). This fetches the amplitude value at index 0. A for loop is used to draw the gradient circles. It  increments x by dim, the size of each circle to position the circles evenly spaced.
 The drawGradient() Method is used within the render() method to draw a single gradient circle at a specified position x, y with a given amplitude. It Calculates initial Hue, h.  Maps the audio amplitude to a hue value between 0 and 360 degrees. This is the initial color hue of the gradient. A nested loop to draw circles. Each iteration the saturation and brightness values are calculated. Fill color set using HSB color mode.
- 
-The Snow class simulates falling snow that responds to the audio input. The snow begins at the top and drifts down. Their size and speed influenced by the audio input. I have rendered the Snow class on all classes but balls and Gradient as it’s as appealing to me. 
+The Snow class simulates falling snow that responds to the audio input. 
+The snow begins at the top and drifts down. Their size and speed influenced by the audio input. I have rendered the Snow class on all classes but balls and Gradient as it’s not as appealing. 
+
+The Constructor Snow(MyVisual mv) initializes the mv reference with a MyVisual instance passed to the constructor. Initializes the snowflakes ArrayList too. 
+
+The render() method calls addSnowflakes() to add new snowflakes. It will Iterates over snowflakes. update() updating their position. display() displays them, snowflakes removed if its offscreen. 
+
+
+Specific number of snowflakes are added to the top of the screen with random positions and sizes in the addSnowflakes(). The class Snowflake contains individual snowflake with its own position, size  and falling speed. Initializes the snowflake with specified parameters. 
+Methods update() display() and isOffscreen() updates the position of the snowflake, renders the snowflake as a white ellipse, checks if the snowflake has fallen completely off the screen.
+
+
 In the MyVisual class, these visuals are switched using keyboard input, the keyPressed() method, allowing for real-time interaction with different visualizations. The draw() method causes the rendering of the chosen visual effect based on the current mode.  
 
  
