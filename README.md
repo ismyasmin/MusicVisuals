@@ -101,7 +101,7 @@ public void render() {
         // mv.hint(mv.ENABLE_DEPTH_TEST);
     }
 ```
-Snow.java render()
+GradientShape.java 
 ```Java
 private void drawGradient(float x, float y, float amplitude) {
         int radius = dim / 2;
