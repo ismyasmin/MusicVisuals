@@ -7,7 +7,9 @@ Student Number: C22485282
 # Description of the assignment
 I have created five classes which each displays different visuals. The Worm class visualizes  a worm-like shape that responds to audio input. The Rotating Blocks class renders 3D rotating blocks, modulates  colors and movements that responds to audio input, creating visual effects. The Balls class generate bouncing balls thats responds to audio input, dynamic patterns with colorful ellipses. The Gradient Shape renders three gradient circles, colors changing based on the audio input. The Snow class has snowfall simulation where snow falls. The snow begins at the top and drifts down. It responds to audio input.
 
-Youtube video of  Music Visualiser Project: https://www.youtube.com/watch?v=PFwGrX_GDFs
+Youtube video of  Music Visualiser Project: [![YouTube](http://img.youtube.com/vi/PFwGrX_GDFs/0.jpg)](https://www.youtube.com/watch?v=PFwGrX_GDFs)
+
+
 
 Song chosen for the Music Visualiser Project: https://www.youtube.com/watch?v=THFFP1EM3EU
 
@@ -74,69 +76,60 @@ Doing this project has taught me a lot. I am most proud of what I managed to do,
 
 # Markdown Tutorial
 
-This is *emphasis*
 
-This is a bulleted list
 
-- Item
-- Item
+This is some code from my project:
 
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
+Worm.java render() 
 ```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
+public void render() {
+        // mv.hint(mv.DISABLE_DEPTH_TEST);
+      
+        // Calculate worm heights based on audio input
+        calcWorm();
+
+        // Render the worm visualization
+        renderWorm();
+
+        // mv.hint(mv.ENABLE_DEPTH_TEST);
+    }
+```
+Snow.java render()
+```Java
+private void drawGradient(float x, float y, float amplitude) {
+        int radius = dim / 2;
+
+           // Calculate the initial hue based on amplitude
+           float h = PApplet.map(amplitude, -1, 1, 0, 360);
+
+           // Draw each circle with a smoothly changing hue
+           for (int r = radius; r > 0; --r) {
+               // Adjust saturation and brightness for a more vivid color
+               float saturation = PApplet.map(r, 0, radius, 90, 100);
+               float brightness = PApplet.map(r, 0, radius, 90, 100);
+
+                // Set fill color using HSB color mode
+                mv.fill(h, saturation, brightness);
+                mv.ellipse(x, y, r, r);
+
+                 // Gradually change the hue for the next circle
+                 h = (h + 1) % 360;
+
+           } // End for
 ```
 
-So is this without specifying the language:
+RotatingBlocks.java constructor 
+```Java
+public RotatingBlocks(MyVisual mv) {
+    this.mv = mv; // Initialize the MyVisual reference
+    blockColors = new float[num]; // Initializes array to store block colors
+    boxPositions = new PVector[num]; // Initializes array to store box positions
+    initializeBlockColors(); // Call method to initialize block colors
+    initializeBoxPositions(); // Call method to initialize box positions
+    } // End  RotatingShape(M)
 
 ```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
 
-This is an image using a relative URL:
 
-![An image](images/p8.png)
 
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
-
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
 
