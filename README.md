@@ -14,7 +14,11 @@ Youtube video of  Music Visualiser Project:
 
 
 
-Song chosen for the Music Visualiser Project: https://www.youtube.com/watch?v=THFFP1EM3EU
+Song chosen for the Music Visualiser Project: 
+
+[![YouTube](http://img.youtube.com/vi/THFFP1EM3EU/0.jpg)](https://www.youtube.com/watch?v=THFFP1EM3EU)
+
+
 
 # Instructions
 Compile and run. 
