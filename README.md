@@ -7,7 +7,8 @@ Student Number: C22485282
 # Description of the assignment
 I have created five classes which each displays different visuals. The Worm class visualizes  a worm-like shape that responds to audio input. The Rotating Blocks class renders 3D rotating blocks, modulates  colors and movements that responds to audio input, creating visual effects. The Balls class generate bouncing balls thats responds to audio input, dynamic patterns with colorful ellipses. The Gradient Shape renders three gradient circles, colors changing based on the audio input. The Snow class has snowfall simulation where snow falls. The snow begins at the top and drifts down. It responds to audio input.
 
-Youtube video of  Music Visualiser Project: [![YouTube](http://img.youtube.com/vi/PFwGrX_GDFs/0.jpg)](https://www.youtube.com/watch?v=PFwGrX_GDFs)
+Youtube video of  Music Visualiser Project: 
+[![YouTube](http://img.youtube.com/vi/PFwGrX_GDFs/0.jpg)](https://www.youtube.com/watch?v=PFwGrX_GDFs)
 
 
 
